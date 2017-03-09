@@ -31,8 +31,8 @@ in CQLSH:
 copy user_item_rating (user_id, item_id, rating) from 'user_item_ratings.csv' with HEADER=true;
 ```
 
-I've created the user_item_rating.csv file which you can readily use
-Don't forget to fireup your cassandra 
+I've created the user_item_rating.csv file which you can readily use, 
+Don't forget to fireup your cassandra;  
 Next start the application using the follow command:
 
 ```
@@ -47,4 +47,4 @@ curl -XPOST http://localhost:8080/train
 
 You can get recommendations by opening `http://localhost:8080/recommendations/[id]` in a browser.
 This can be fine tuned to be consumed by a mobile Application
-# Recommendation_Engine
+## Recommendation_Engine
