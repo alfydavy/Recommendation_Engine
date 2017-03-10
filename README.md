@@ -8,6 +8,7 @@ You can download both from the internet:
 - Spark: spark.apache.org
 - Hadoop: hadoop.apache.org
 - Cassandra: cassandra.apache.org
+- Akka: com.typesafe.akka
 
 ## Quick start
 After you have Spark, Hadoop and cassandra installed run the following scripts on the Cassandra server using CQLSH
@@ -32,7 +33,7 @@ copy user_item_rating (user_id, item_id, rating) from 'user_item_ratings.csv' wi
 ```
 
 I've created the user_item_rating.csv file which you can readily use, 
-Don't forget to fireup your cassandra;  
+Don't forget to fireup your cassandra;
 Next start the application using the follow command:
 
 ```
@@ -45,6 +46,7 @@ Finally use CURL to train the first version of the recommendation system model
 curl -XPOST http://localhost:8080/train
 ```
 
+The  Rest API is created using Akka;
 You can get recommendations by opening `http://localhost:8080/recommendations/[id]` in a browser.
 This can be fine tuned to be consumed by a mobile Application
-## Recommendation_Engine
+
